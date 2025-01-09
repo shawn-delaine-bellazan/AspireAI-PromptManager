@@ -37,7 +37,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<AIPromptService>();
 
 // Add services to the container.
-builder.AddSqlServerDbContext<ApplicationDbContext>("ProjectNameDb");
+builder.AddSqlServerDbContext<ApplicationDbContext>("PromptTemplateSystemDb");
 
 // Add AutoMapper
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProjectName.DataService\ProjectName.DataService.csproj" />
+    <ProjectReference Include="..\ProjectName.SemanticKernel\ProjectName.SemanticKernel.csproj" />
     <ProjectReference Include="..\ProjectName.Web\ProjectName.Web.csproj" />
   </ItemGroup>
 

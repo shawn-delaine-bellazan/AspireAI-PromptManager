@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using ProjectName.DataService.Dtos;
 using ProjectName.DataService.Models;
-using ProjectName.DataService.Models.Dtos;
 using ProjectName.DataService.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -51,14 +51,22 @@ namespace ProjectName.DataService.Controllers
         /// <summary>
         /// Creates a new prompt design.
         /// </summary>
-        /// <param name="promptDesignDto">The prompt design data to create.</param>
+        /// <param name="createPromptDesignDto">The data for creating a new prompt design.</param>
         /// <returns>The created prompt design with its ID.</returns>
         [HttpPost]
-        public async Task<ActionResult<PromptDesignDto>> CreatePromptDesign(AddPromptDesignDto promptDesignDto)
+        public async Task<ActionResult<PromptDesignDto>> CreatePromptDesign([FromBody] CreatePromptDesignDto createPromptDesignDto)
         {
-            var promptDesign = _mapper.Map<PromptDesign>(promptDesignDto);
+            // Map the DTO to the entity
+            var promptDesign = _mapper.Map<PromptDesign>(createPromptDesignDto);
+
+            // Use the service to add the prompt design
             await _aiPromptService.AddPromptDesignAsync(promptDesign);
-            return CreatedAtAction(nameof(GetPromptDesign), new { id = promptDesign.Id }, _mapper.Map<PromptDesignDto>(promptDesign));
+
+            // Map the created entity back to DTO for response
+            var result = _mapper.Map<PromptDesignDto>(promptDesign);
+
+            // Return the result with the correct status code
+            return CreatedAtAction(nameof(GetPromptDesign), new { id = result.Id }, result);
         }
 
         /// <summary>

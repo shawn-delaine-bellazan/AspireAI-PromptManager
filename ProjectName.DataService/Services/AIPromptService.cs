@@ -24,17 +24,6 @@ namespace ProjectName.DataService.Services
         public async Task UpdatePromptDesignAsync(PromptDesign design) => await _unitOfWork.PromptDesigns.UpdateAsync(design);
         public async Task DeletePromptDesignAsync(int id) => await _unitOfWork.PromptDesigns.DeleteAsync(id);
 
-        // Method from previous example
-        public async Task AddPromptAndDesignAsync(string promptContent, string designName, int userId)
-        {
-            var promptDesign = new PromptDesign { Name = designName, UserId = userId };
-            await _unitOfWork.PromptDesigns.AddAsync(promptDesign);
 
-            var prompt = new Prompt { Content = promptContent, UserId = userId, PromptDesignId = promptDesign.Id };
-            await _unitOfWork.Prompts.AddAsync(prompt);
-
-            // Commit all operations in one transaction
-            await _unitOfWork.CommitAsync();
-        }
     }
 }

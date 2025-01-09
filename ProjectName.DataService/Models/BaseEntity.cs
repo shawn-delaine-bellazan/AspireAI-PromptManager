@@ -1,4 +1,6 @@
-﻿namespace ProjectName.DataService.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjectName.DataService.Models
 {
     /// <summary>
     /// Base class for all entities, providing common properties like Id, CreatedAt, and UpdatedAt.
@@ -8,8 +10,8 @@
         /// <summary>
         /// The unique identifier for the entity.
         /// </summary>
+        [Key]
         public int Id { get; set; }
-
         /// <summary>
         /// The date and time when the entity was created.
         /// </summary>

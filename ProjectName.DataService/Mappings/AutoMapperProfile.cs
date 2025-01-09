@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using ProjectName.DataService.Models.Dtos;
 using ProjectName.DataService.Models;
+using ProjectName.DataService.Dtos;
 
 namespace ProjectName.DataService.Mappings
 {
@@ -8,9 +8,11 @@ namespace ProjectName.DataService.Mappings
     {
         public AutoMapperProfile()
         {
+            CreateMap<CreatePromptDto, Prompt>();
             CreateMap<Prompt, PromptDto>().ReverseMap();
-            CreateMap<PromptDesign, PromptDesignDto>().ReverseMap();
-            CreateMap<PromptDesign, AddPromptDesignDto>().ReverseMap();
+
+            CreateMap<CreatePromptDesignDto, PromptDesign>();
+            CreateMap<PromptDesign, PromptDesignDto>();
         }
     }
 }

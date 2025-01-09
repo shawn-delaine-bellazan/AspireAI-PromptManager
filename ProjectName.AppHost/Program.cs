@@ -5,7 +5,8 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var sqlServer = builder.AddSqlServer("sql")
                  .WithLifetime(ContainerLifetime.Persistent)
-                 .AddDatabase("ProjectNameDb");
+                 .AddDatabase("PromptTemplateSystemDb");
+
 
 var cache = builder.AddRedis("cache");
 
@@ -15,6 +16,9 @@ var dataService = builder.AddProject<Projects.ProjectName_DataService>("dataserv
 
 builder.AddProject<Projects.ProjectName_Web>("webfrontend")
     .WithReference(dataService);
+
+
+builder.AddProject<Projects.ProjectName_SemanticKernel>("projectname-semantickernel");
 
 
 builder.Build().Run();

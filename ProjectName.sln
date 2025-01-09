@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35617.110 d17.13
+VisualStudioVersion = 17.13.35617.110
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.AppHost", "ProjectName.AppHost\ProjectName.AppHost.csproj", "{D0BD30C7-CCA5-4EC0-A5D3-72F2E741F887}"
 EndProject
@@ -11,6 +11,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.Tests", "ProjectName.Tests\ProjectName.Tests.csproj", "{CB3212DE-CCFA-9AD6-3228-8D65AEF08EBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.DataService", "ProjectName.DataService\ProjectName.DataService.csproj", "{C1158567-AAA4-6A40-E6EB-CFCDCBF3CCC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectName.SemanticKernel", "ProjectName.SemanticKernel\ProjectName.SemanticKernel.csproj", "{E34A82EF-9073-4563-DE9C-CA8057E8E8FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{C1158567-AAA4-6A40-E6EB-CFCDCBF3CCC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1158567-AAA4-6A40-E6EB-CFCDCBF3CCC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1158567-AAA4-6A40-E6EB-CFCDCBF3CCC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34A82EF-9073-4563-DE9C-CA8057E8E8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34A82EF-9073-4563-DE9C-CA8057E8E8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34A82EF-9073-4563-DE9C-CA8057E8E8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34A82EF-9073-4563-DE9C-CA8057E8E8FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

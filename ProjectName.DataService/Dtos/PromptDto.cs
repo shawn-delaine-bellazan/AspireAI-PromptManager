@@ -1,4 +1,4 @@
-﻿namespace ProjectName.DataService.Models.Dtos
+﻿namespace ProjectName.DataService.Dtos
 {
     public class PromptDto
     {

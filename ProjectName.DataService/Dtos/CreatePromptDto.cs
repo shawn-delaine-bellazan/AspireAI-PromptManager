@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ProjectName.DataService.Models
+namespace ProjectName.DataService.Dtos
 {
-    public class Prompt : BaseEntity
+    public class CreatePromptDto
     {
-
         [Required]
         [StringLength(2000)]
         public string Content { get; set; }
@@ -17,8 +15,5 @@ namespace ProjectName.DataService.Models
         public string Description { get; set; }
 
         public int? PromptDesignId { get; set; }
-        [ForeignKey("PromptDesignId")]
-        public PromptDesign PromptDesign { get; set; }
-
     }
 }
