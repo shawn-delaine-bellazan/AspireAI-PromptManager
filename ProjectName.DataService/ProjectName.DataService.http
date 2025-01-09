@@ -1,0 +1,6 @@
+@ProjectName.DataService_HostAddress = http://localhost:5103
+
+GET {{ProjectName.DataService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
