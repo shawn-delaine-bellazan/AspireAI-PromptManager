@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="Aspire.Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.0-preview3.24332.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />

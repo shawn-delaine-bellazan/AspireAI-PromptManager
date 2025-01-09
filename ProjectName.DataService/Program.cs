@@ -7,6 +7,7 @@ using ProjectName.DataService.Repositories;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using ProjectName.DataService.Services;
+using ProjectName.DataService.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,7 +39,8 @@ builder.Services.AddScoped<AIPromptService>();
 // Add services to the container.
 builder.AddSqlServerDbContext<ApplicationDbContext>("ProjectNameDb");
 
-
+// Add AutoMapper
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 
 
